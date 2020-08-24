@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--Bootstrap css-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <title>Quiz Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+    
+    :root {
+            --green: #00cb75;
+            --orange1: #ff8856;
+            --orange: rgba(229, 66, 10, 0.75);
+            --color1: #bee75e;
+            --color2: #009954;
+            --color3: #f6efea;
+        }
+    .wrapper {
+      background: url('extra/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+    .d-flex.justify-content-center{
+      padding-top: 160px;
+    }
+
+    .quiz {
+      max-width: 495px;
+      padding: 1rem;
+      text-align: center;
+    }
+    @media (max-width: 500px) {
+      .quiz{
+      max-width: 100%;
+      padding: 1rem 0;
+      }
+    }
+    .quiz_body {
+      padding: 30px 30px;
+    }
+
+    .quiz_user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quiz_body {
+      background-color: #ecf0f1;
+    }
+
+    .option_group {
+      list-style-type: none;
+      margin: 30px 0;
+    }
+
+    .option {
+      display: block;
+      width: 300px;
+      background-color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin: auto;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 100px;
+      border: 2px solid transparent;
+      transition: 0.4s all;
+    }
+    @media (max-width: 400px) {
+      .option {
+        width: 100%;
+    }
+    }
+    .option:hover {
+      cursor: pointer;
+      /* background-color: rgba(255, 255, 255, 0.1); */
+      border: 2px solid var(--orange1);
+      color: var(--orange1);
+    }
+
+    .option.active {
+      background-color: var(--orange1);
+      color: #fff;
+    }
+
+    .btn-next {
+      border: none !important;
+      padding: 15px 35px;
+      background-color: var(--orange1);
+      color: #fff;
+      border-radius: 27px;
+      outline: none !important;
+      transition: 0.4s all;
+    }
+
+    .btn-next:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: var(--orange1);
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+       <div class="row">
+        <div class="col-4 col-lg-4 col-md-4 col-sm-4 offset-4 offset-md-0 pt-md-5">
+          <img src="" id="imageID" class="img-fluid" alt="" style="filter: drop-shadow(2px 4px 6px black);" />
+        </div>
+      <div class="col-lg-8 col-md-8">
+        <div class="quiz">
+          <div class="quiz_header">
+            <div class="quiz_user">
+              <h4>Name: <span class="name"></span></h4>
+            </div>
+          </div>
+          <div class="quiz_body">
+            <div id="questions">
+              <!-- <ul class="option_group">
+                <li class="option">option 1</li>
+                <li class="option">option 2</li>
+                <li class="option">option 3</li>
+                <li class="option">option 4</li>
+              </ul> -->
+            </div>
+            <button class="btn-next" onclick="next()">Next Question >></button>
+          </div>
+        </div>
+      </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- site.js -->
+  <script src="dist/js/site.js"></script>
+
+  <!-- user info -->
+  <script>
+    let user_name = sessionStorage.getItem("name");
+    document.querySelector("span.name").innerHTML = user_name;
+  </script>
+
+</body>
+
+</html>

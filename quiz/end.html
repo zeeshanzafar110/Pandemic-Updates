@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JavaScript Quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .award_icon {
+            display: block;
+            font-size: 300px;
+            color: #000;
+        }
+
+        .username,
+        .userreport {
+            color: #000;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .big-img{
+            display: flex;
+            margin: auto;
+            width: 300px;
+        }
+        .pt-5{
+            padding-top: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="pt-5">
+           <div> <img src="img/doctor.svg" alt="" class="big-img"></div>
+           <br>
+            <h3 class="username">Name: <span class="name"></span></h3>
+            <p class="userreport"><b>RESULT:</b> <br> Your risk of having COVID-19 is <br> <br> <span class="report" id="report" style="font-weight: 700; font-size: 24px;"></span></p>
+        </div>
+    </div>
+    <!-- user info -->
+    <script src="dist/js/userInfo.js"></script>
+    <script>
+        let msg = document.getElementById("report").innerHTML;
+        if(msg == "SEVERE!"){
+            document.getElementById('report').style.color = 'red';
+        }
+        else if(msg == "HIGH."){
+            document.getElementById('report').style.color = 'orange';
+        }
+        else if(msg == "MEDIUM."){
+            document.getElementById('report').style.color = 'yellow';
+        }
+        else{
+            document.getElementById('report').style.color = 'green';
+        }
+    </script>
+</body>
+
+</html>

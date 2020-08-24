@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/themes/dark_turquoise.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="icon" href="fav icon.png" sizes="32x32">
+
+	
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<!--//meta tags ends here-->
+	<!--booststrap-->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+	<!--//booststrap end-->
+
+	<!-- font-awesome icons -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" />
+	<!-- gallery-->
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+	<!-- clients-->
+
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<!-- banner text slider-->
+	<!--stylesheets-->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+	<!-- banner text slider-->
+
+	<link href="//fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600" rel="stylesheet">
+    <!--//style sheet end here-->
+    <link rel="icon" href="images/fav icon.png" sizes="32x32">
+	<title>COVID-19</title>
+	
+  </head>
+  <body>
+	<div  id="home">
+		<div class="header-w3layouts">
+
+			<!-- Navigation -->
+            <div class="w3-agile-logo">
+			<div class=" head-wl">
+				<div class="agileinfo-social-grids">
+					<ul>
+						<li><a href="https://www.facebook.com/NHSRCOfficial/"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="https://www.facebook.com/WHO/"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="https://www.instagram.com/imrankhan.pti/"><span class="fa fa-instagram"></span></a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Coronavirus"><span class="fa fa-vk"></span></a></li>
+					</ul>
+				</div>
+				<div class="w3-header-top-right">
+					<div class="email-right">
+						<p><span class="fa fa-envelope" aria-hidden="true"></span> <a href="contact@nhsrc.gov.pk" class="info">contact@nhsrc.gov.pk</a></p>
+
+					</div>
+					<div class="w3-header-top-right-text">
+
+						<p><span class="fa fa-phone" aria-hidden="true"></span>1166</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+        
+		<nav class="navbar navbar-default navbar-fixed-top" style="flex-wrap: nowrap;">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+					 <a class="navbar-brand" href="#"><img src="images/log5.PNG" alt="logo" id="logo"></a></div>
+				
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-right" style="flex-direction: row;">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden"><a class="page-scroll" href="#page-top"></a> </li>
+						
+						<li><a href="indexap.html">Live-stats</a></li>
+					
+						<li><a  href="index.html">Home</a></li>
+						
+						<li><a class="page-scroll scroll" href="index.html#symptoms">Symptoms</a></li>	
+						<li><a class="page-scroll scroll" href="index.html#service">Facilities</a></li>
+						<li><a class="page-scroll scroll" href="index.html#gallery">Prevention</a></li>
+						<li><a class="page-scroll scroll" href="index.html#about2">About</a></li>
+						<li><a class="page-scroll scroll" href="index.html#contact">Contact</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+		</div>
+
+
+		
+		<div class="clearfix"> </div>
+	</div>
+
+	<!-- //header -->
+	<br><br><br><br>
+
+    <div id="container" style="width: 100%"></div>       
+    <div id="container2" style="width: 100%; height: 100%;"></div>
+    <div id="container3" style="width: 100%; height: 100%;"></div>
+    <h1>World Wide Covid Current Cases Till Now</h1>
+
+    <span>New Recovered<button type="button" class="btn btn-outline-success" id="new_recovered"></button></span>
+    <span>New Death<button type="button" class="btn btn-outline-danger" id="new_deaths"></button></span>
+    <span>New Confirmed<button type="button" class="btn btn-outline-warning" id="new_confirmed"></button></span>
+
+    <span>Total Recovered<button type="button" class="btn btn-outline-success" id="total_recovered"></button></span>
+    <span>Total Death<button type="button" class="btn btn-outline-danger" id="total_deaths"></button></span>
+    <span>Total Confirmed<button type="button" class="btn btn-outline-warning" id="total_confirmed"></button></span>
+		<div class="d-md-flex h-md-100 align-items-center">
+
+				<!-- First Half -->
+				<div class="col-md-6 p-0 bg-indigo h-md-100">
+				    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+				        <div class="logoarea pt-5 pb-5" style="margin-bottom: 379px;">
+
+									 <div class="dropdown">
+										  <button onclick="myFunction()" class="dropbtn">Select Country To View The Covid-19 Cases
+										  	    <a href="#" class="notification">
+												  <span>Total Country List</span>
+												  <span class="badge">
+												  	<p id='total_country'></p>
+												  </span>
+												</a> 
+										  </button>
+										  <div id="myDropdown" class="dropdown-content">
+										        <input type="text" placeholder="Type Country Name To Search..." id="myInput" onkeyup="filterFunction()">		  
+								              	<div id='coutrydropdown'>
+									            </div>
+										  </div>
+								    </div>	       
+						</div>
+				    </div>
+				</div>
+
+
+
+
+				<!-- Second Half -->
+
+				<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+                          <script>
+							anychart.onDocumentReady(function() {
+
+						    fetch('https://api.covid19api.com'+'/summary', requestOptions)
+							  .then(function(resp) { return resp.json() })
+							  .then(function(data) {
+									console.log('country summary data->',data);
+									
+									document.getElementById('new_confirmed').innerHTML = data.Global.NewConfirmed;
+									document.getElementById('total_confirmed').innerHTML = data.Global.TotalConfirmed;
+									document.getElementById('new_recovered').innerHTML = data.Global.NewRecovered;
+									document.getElementById('total_recovered').innerHTML = data.Global.TotalRecovered;
+									document.getElementById('new_deaths').innerHTML = data.Global.NewDeaths;
+									document.getElementById('total_deaths').innerHTML = data.Global.TotalDeaths;
+									var dataarray=[];
+									data.Countries.forEach(readArrayData);
+				                    function readArrayData(value) {
+
+				                    	let dd = [value.Slug,value.TotalConfirmed];
+                                        dataarray.push(dd); 
+									}
+									var dataarrayRecovered=[];
+									data.Countries.forEach(readArrayDataRecoverd);
+				                    function readArrayDataRecoverd(value) {
+				                    	let dd = [value.Slug,value.TotalRecovered];
+                                        dataarrayRecovered.push(dd); 
+									}
+
+								    var dataarrayDeath=[];
+									data.Countries.forEach(readArrayDataDeath);
+				                    function readArrayDataDeath(value) {
+				                    	let dd = [value.Slug,value.TotalDeaths];
+                                        dataarrayDeath.push(dd); 
+									}
+									// create the data
+									  var data_g = {
+									    header: ["Country","Confirmed Cases Till Now"],
+									    rows: dataarray
+									    };
+									  var data_recovered = {
+									    header: ["Country","Recovered Cases Till Now"],
+									    rows: dataarrayRecovered
+									    };
+								      var data_death = {
+									    header: ["Country","Deaths Cases Till Now"],
+									    rows: dataarrayDeath
+									    };    
+									  anychart.theme(anychart.themes.darkTurquoise);  
+									  // create the column/bar chart
+									  var chart = anychart.column();
+
+									  var chartrecovered = anychart.column();
+
+									  var chartDeath = anychart.column();
+									 
+									  // add the data
+									  chart.data(data_g);
+									 
+									  // set the chart title
+									  chart.title("Confirmed Cases of COVID-19 Country Wise");
+									 
+
+									  // add ticks
+									  chart.yScale().ticks().interval(50000);
+									  chart.yScale().minorTicks().interval(10000);
+									 // add grid lines
+									  chart.yGrid().enabled(true);
+									  chart.yMinorGrid().enabled(true);
+                                     
+                                      chart.animation(true);
+
+                                      // set the container
+									  chart.container("container");
+									  // draw the chart
+									  chart.draw();
+
+
+									   // add the data
+									  chartrecovered.data(data_recovered);
+									 
+									  // set the chart title
+									  chartrecovered.title("Recovered Cases of COVID-19 Country Wise");
+									 
+
+									  // add ticks
+									 chartrecovered.yScale().ticks().interval(50000);
+									 chartrecovered.yScale().minorTicks().interval(10000);
+									 // add grid lines
+									 chartrecovered.yGrid().enabled(true);
+									 chartrecovered.yMinorGrid().enabled(true);
+                                     
+                                     chartrecovered.animation(true);
+
+                                      // set the container
+									  chartrecovered.container("container2");
+									  // draw the chart
+									  chartrecovered.draw();
+
+
+
+									  // add the data
+									  chartDeath.data(data_death);
+									 
+									  // set the chart title
+									  chartDeath.title("Deaths Cases of COVID-19 Country Wise");
+									 
+
+									  // add ticks
+									  chartDeath.yScale().ticks().interval(50000);
+									  chartDeath.yScale().minorTicks().interval(10000);
+									  // add grid lines
+									  chartDeath.yGrid().enabled(true);
+									  chartDeath.yMinorGrid().enabled(true);
+                                     
+                                      chartDeath.animation(true);
+
+                                      // set the container
+									  chartDeath.container("container3");
+									  // draw the chart
+									  chartDeath.draw();
+
+
+								}
+							 )
+							 .catch(error => console.log('error', error)); 
+							  
+							 
+							});
+                     </script>
+				    <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+				    	<div id="country_wise_covid_19_cases_table" style="height: 104%;overflow-y: scroll;display:none;" class="table-responsive">	    		
+				    	</div>
+				    </div>
+				</div>
+			    
+		</div>
+
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='https://code.jquery.com/jquery-3.5.1.js'></script>
+    <script type="text/javascript" src='https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js'></script>
+    <script>
+    $(document).ready(function() {	
+		  $('#country_wise_covid_19_cases').DataTable( {
+           }); 
+     });
+	</script>
+	
+	<div class="footer">
+		<nav>
+			<ul class="nav-buttom">
+				<li><a class="page-scroll scroll" href="#home">Home</a></li>
+				<li><a class="page-scroll scroll" href="#symptoms">Symptoms</a></li>
+				<li><a class="page-scroll scroll" href="#service">Facilities</a></li>
+				<li><a class="page-scroll scroll" href="#gallery">Prevention</a></li>
+				<li><a class="page-scroll scroll" href="#about2">About</a></li>
+				<li><a class="page-scroll scroll" href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="container" id="about2">
+		<div class="colr-row col-md-6  ">
+			<div class="col-md-6 col-sm-6 col-xs-6  bottom-head bottm-grid">
+				<h2><a href="index.html">Coronavirus</a></h2>
+				
+				<div class="clearfix"> </div>
+			</div>
+			
+			<div class="col-md-6 col-sm-6 col-xs-6 copyright bottm-grid">
+				<h3>Follow us</h3>
+				<div class="icons">
+					<ul>
+						<li><a href="https://www.facebook.com/NHSRCOfficial/"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="https://www.facebook.com/WHO/"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="https://www.instagram.com/imrankhan.pti/"><span class="fa fa-instagram"></span></a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Coronavirus"><span class="fa fa-vk"></span></a></li>
+					</ul>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+			</div>
+			<div class="colr-row  col-md-6">
+			<div class="col-md-6 col-sm-6 col-xs-6 one bottm-grid">
+				<h3>About us</h3>
+				<p> See the Realtime Pakistan and Worldwide COVID-19 situation! </p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6 three bottm-grid">
+				<h3>Contact</h3>
+				<div class="addres up-out">
+					<p><span class="fa fa-map-marker icons-left" aria-hidden="true"></span> 3rd Floor Kohsar
+                                 
+                                                                                            Block,Islamabad</p>
+
+					<p><span class="fa fa-phone icons-left" aria-hidden="true"></span>Call us:+92-51-9245746</p>
+
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!-- //Copyright -->
+			<div class="clearfix"> </div>
+		</div>
+		</div>
+	</div>
+	
+	<!--menu script-->
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!--//menu script-->
+	<!--FlexSlider banner-->
+
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!--End-slider-script-->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+
+
+
+	
+  </body>
+</html>
